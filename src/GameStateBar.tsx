@@ -1,5 +1,13 @@
 import * as React from "react";
 import { GameState } from "./constants";
+import styled, { css } from './styled-components';
+
+const GameStateBarContainer = styled.div`
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    height: 60px;
+`;
 
 interface GameStateBarState {
     gameState: GameState;
@@ -32,7 +40,7 @@ export class GameStateBar extends React.Component<{}, GameStateBarState> {
 
     render() {
         return (
-            <div className="gameStateBar"> {this.state.gameState} </div>
-        )
+            <GameStateBarContainer> {this.state.gameState} </GameStateBarContainer>
+        );
     }
 }   

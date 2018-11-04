@@ -1,5 +1,13 @@
 import * as React from "react";
 import { CellValue, GameState, playerCell, aiCell } from "./constants";
+import styled, { css, keyframes } from './styled-components';
+import { Cell } from './Cell';
+
+const BoardContainer = styled.div`
+    position: relative;
+    width: 500px;
+    height: 500px;
+`;
 
 interface BoardState {
     cells: CellValue[];
@@ -137,57 +145,9 @@ export class Board extends React.Component<{}, BoardState> {
         });
 
         return (
-            <div className="board">
+            <BoardContainer>
                 {cells}
-            </div>
+            </BoardContainer>
         )
-    }
-}
-
-interface CellProps extends React.Props<any> {
-    pos: number;
-    val: CellValue;
-    handleMove: () => void;
-}
-
-class Cell extends React.Component<CellProps, {}> {
-
-    // position of cell to className
-    private posToClassName(pos: number): string {
-        let className = "cell";
-        switch (Math.floor(pos / 3)) {
-            case 0:
-                className += " top";
-                break;
-            case 2:
-                className += " bottom";
-                break;
-            default: break;
-        }
-        switch (pos % 3) {
-            case 0:
-                className += " left";
-                break;
-            case 2:
-                className += " right";
-                break;
-            default:
-                break;
-        }
-        return className;
-    }
-
-    private handleClick(e: React.MouseEvent<HTMLDivElement>) {
-        this.props.handleMove();
-    }
-
-    render() {
-        let name = this.props.val;
-        if (this.props.val === "") {
-            name = "";
-        }
-        return <div className={this.posToClassName(this.props.pos)} onClick={e => this.handleClick(e)}>
-            <div className={name}> {this.props.val} </div>
-        </div>
     }
 }
