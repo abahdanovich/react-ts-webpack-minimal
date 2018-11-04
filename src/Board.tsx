@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 import { CellValue, GameState, playerCell, aiCell } from "./constants";
-import styled, { css, keyframes } from './styled-components';
+import styled from './styled-components';
 import { Cell } from './Cell';
 
 const BoardContainer = styled.div`

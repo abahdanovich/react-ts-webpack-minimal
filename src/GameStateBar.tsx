@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 import { GameState } from "./constants";
-import styled, { css } from './styled-components';
+import styled from './styled-components';
 
 const GameStateBarContainer = styled.div`
     text-align: center;

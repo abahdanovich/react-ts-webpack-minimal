@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { CellValue } from "./constants";
 import styled, { css, keyframes } from './styled-components';
 
