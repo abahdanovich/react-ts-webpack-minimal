@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "allowJs": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true
+    },
+    "include": [
+        "src"
+    ]
+}
