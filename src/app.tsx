@@ -29,7 +29,7 @@ const AppContainer = styled.div`
     user-select: none;
 `;
 
-const Description = styled<{ player: 'X' | 'O' }, 'div'>('div')`
+const Description = styled.div<{ player: 'X' | 'O' }>`
     cursor: pointer;
     font-size: 25px;
     font-weight: bold;

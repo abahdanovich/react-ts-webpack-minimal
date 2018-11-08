@@ -4,7 +4,7 @@ import styled, { css, keyframes } from './styled-components';
 
 type PosName = 'top' | 'bottom' | 'left' | 'right';
 
-const CellContainer = styled<{ posName: PosName[] }, 'div'>('div')`
+const CellContainer = styled.div<{ posName: PosName[] }>`
     float: left;
     width: 33.3333%;
     height: 33.3333%;
@@ -40,7 +40,7 @@ const appear = keyframes`
     }
 `;
 
-const CellInner = styled<{ val: CellValue }, 'div'>('div')`
+const CellInner = styled.div<{ val: CellValue }>`
     ${p => p.val === 'X' && css`
         animation-name: ${appear};
         animation-duration: .3s;

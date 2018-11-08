@@ -15,10 +15,7 @@ module.exports = {
   module: {
     rules: [{
         test: /\.(t|j)sx?$/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          getCustomTransformers: path.join(__dirname, './webpack.ts-transformers.js')
-        }
+        loader: 'awesome-typescript-loader'
       },
       {
         test: /\.js$/,
